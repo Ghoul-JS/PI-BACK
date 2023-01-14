@@ -17,7 +17,7 @@ const getVideogames = async (req, res) => {
         ? res.status(200).json(gameName)
         : res.status(404).send("No se encuentra el videojuego :c");
     } else {
-      return res.status(200).json({ succes: true, game: allGames });
+      return res.status(200).json(allGames);
     }
   } catch (error) {
     return res.status(500).json({ message: error.message });
